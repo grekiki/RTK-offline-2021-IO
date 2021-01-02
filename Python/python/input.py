@@ -4,7 +4,7 @@ TestCase = NamedTuple("TestCase",
 [('id', int), ('dimx', int), ('dimy', int), ('dimz', int), ('hmap', List[List[int]]), ('num_blocks', int), ('blocks', List[Tuple[int, int, int]])])
 
 def parse_case(num: int) -> (int, int, int, List[List[int]], int, List[Tuple[int, int, int]]):
-    with open("input.in") as f:
+    with open("Python\\input.in") as f:
         if f.readline().strip() != "Pokrajina":
             print("Input file is not correct. The first line should be Pokrajina")
         cases = int(f.readline().strip())

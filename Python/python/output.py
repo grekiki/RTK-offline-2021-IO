@@ -10,7 +10,7 @@ def print_output(tc, blocks) -> None:
         return None
     if not is_better(blocks, tc):
         return None
-    with open("outputs\\output"+str(tc.id)+".txt", "w") as f:
+    with open("Python\\outputs\\output"+str(tc.id)+".txt", "w") as f:
         f.write(str(code))
         f.write("\n")
         f.write("Pokrajina")
@@ -50,7 +50,7 @@ def is_better(blocks, tc):
     p = 1
     s = ""
     changed = False
-    for l in open("scores.txt"):
+    for l in open("Python\\scores.txt"):
         if p==id:
             if length < int(l.strip()):
                 s += str(length)+"\n"
@@ -63,7 +63,7 @@ def is_better(blocks, tc):
         else:
             s+=l
         p+=1
-    with open("scores.txt", "w") as f:
+    with open("Python\\scores.txt", "w") as f:
         f.write(s)
     return True
 
